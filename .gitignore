@@ -30,6 +30,7 @@ hs_err_pid*
 ### Maven ###
 target/
 pom.xml.tag
+settings.xml
 pom.xml.releaseBackup
 pom.xml.versionsBackup
 pom.xml.next
@@ -114,3 +115,19 @@ local.properties
 .sts4-cache/
 
 # End of https://www.gitignore.io/api/eclipse
+
+# Created by https://www.gitignore.io/api/visualstudiocode
+# Edit at https://www.gitignore.io/?templates=visualstudiocode
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
+# End of https://www.gitignore.io/api/visualstudiocode
