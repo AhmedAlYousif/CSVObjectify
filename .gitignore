@@ -39,5 +39,6 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 .flattened-pom.xml
-
 # End of https://www.gitignore.io/api/java,maven
+
+.setting
