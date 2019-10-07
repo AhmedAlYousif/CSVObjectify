@@ -5,7 +5,7 @@
 
 	<groupId>me.ahmedy.maven</groupId>
 	<artifactId>CSVObjectify</artifactId>
-	<version>0.0.1</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>CSVObjectify</name>
@@ -13,8 +13,10 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<bintray.repo>bintray-ahmedalyousif/CSVObjectivy</bintray.repo>
-        <bintray.package>CSVObjectivy</bintray.package>
+		<bintray.repo>bintray-ahmedalyousif/java</bintray.repo>
+		<bintray.package>CSVObjectivy</bintray.package>
+		<maven.compiler.source>1.6</maven.compiler.source>
+    	<maven.compiler.target>1.6</maven.compiler.target>
 	</properties>
 
 	<dependencies>
@@ -27,7 +29,7 @@
 		<dependency>
 			<groupId>com.opencsv</groupId>
 			<artifactId>opencsv</artifactId>
-			<version>3.8</version>
+			<version>4.6</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -48,9 +50,9 @@
 	</build>
 	<distributionManagement>
 	  <repository>
-		  <id>bintray-ahmedalyousif-CSVObjectivy</id>
-		  <name>ahmedalyousif-CSVObjectivy</name>
-	      <url>https://api.bintray.com/maven/ahmedalyousif/CSVObjectivy/CSVObjectivy/;publish=1</url>
+		  <id>bintray-AhmedAlYousif-java</id>
+		  <name>ahmedalyousif-java</name>
+	      <url>https://api.bintray.com/maven/ahmedalyousif/java/CSVObjectivy/;publish=1</url>
 	  </repository>
 	</distributionManagement>
 </project>
