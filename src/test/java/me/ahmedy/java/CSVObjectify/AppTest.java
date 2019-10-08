@@ -1,4 +1,4 @@
-package me.ahmedy.maven.CSVObjectify;
+package me.ahmedy.java.CSVObjectify;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -1,4 +1,4 @@
-package me.ahmedy.maven.CSVObjectify.annotations;
+package me.ahmedy.java.CSVObjectify.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

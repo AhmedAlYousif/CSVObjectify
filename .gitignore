@@ -132,3 +132,5 @@ local.properties
 .history
 
 # End of https://www.gitignore.io/api/visualstudiocode
+
+.m2/

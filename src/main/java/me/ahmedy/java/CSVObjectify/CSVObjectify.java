@@ -1,15 +1,15 @@
-package me.ahmedy.maven.CSVObjectify;
+package me.ahmedy.java.CSVObjectify;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
 import com.opencsv.CSVParser;
-import me.ahmedy.maven.CSVObjectify.annotations.*;
+import me.ahmedy.java.CSVObjectify.annotations.*;
 
 public class CSVObjectify 
 {
     
     private static void checkIfSerializable(Class<?> objClass) throws CSVAnnotationMissingException {
-	    if (!objClass.isAnnotationPresent(me.ahmedy.maven.CSVObjectify.annotations.CSVParsable.class)) {
+	    if (!objClass.isAnnotationPresent(CSVParsable.class)) {
 	        throw new CSVAnnotationMissingException(objClass.getName());
 	    }
 	}
