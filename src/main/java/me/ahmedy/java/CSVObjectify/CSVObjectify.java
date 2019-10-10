@@ -1,9 +1,16 @@
 package me.ahmedy.java.CSVObjectify;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.opencsv.CSVParser;
 import me.ahmedy.java.CSVObjectify.annotations.*;
@@ -14,6 +21,19 @@ public class CSVObjectify {
 		if (!objClass.isAnnotationPresent(CSVParsable.class)) {
 			throw new CSVAnnotationMissingException(objClass.getName());
 		}
+	}
+
+	public static <T> ArrayList<T> parseFile(File file, Class<T> objClass) throws IOException, IllegalArgumentException,
+			IllegalAccessException, InstantiationException, InvocationTargetException, CSVAnnotationMissingException,
+			CSVFieldTypeNotSupportedException, CSVMethodParameterTypeNotSupportedException {
+		ArrayList<T> list = new ArrayList<T>();
+		BufferedReader reader = new BufferedReader(new FileReader(file));
+		String line = "";
+		while((line = reader.readLine()) != null){
+			list.add(parseLine(line, objClass));
+		}
+		reader.close();
+		return list;
 	}
 
 	public static <T> T parseLine(String line, Class<T> objClass)
