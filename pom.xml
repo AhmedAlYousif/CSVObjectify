@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0          http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0          http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>me.ahmedy.java</groupId>
 	<artifactId>CSVObjectify</artifactId>
-	<version>1.1.0</version>
+	<version>1.1.4</version>
 	<packaging>jar</packaging>
 
-	<name>CSVObjectify</name>
-	<url>http://maven.apache.org</url>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<bintray.repo>bintray-ahmedalyousif/java</bintray.repo>
-		<bintray.package>CSVObjectivy</bintray.package>
 		<maven.compiler.source>1.6</maven.compiler.source>
-    	<maven.compiler.target>1.6</maven.compiler.target>
+		<maven.compiler.target>1.6</maven.compiler.target>
 	</properties>
 
 	<dependencies>
@@ -38,22 +34,13 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
-					<version>3.0.1</version>
+					<version>3.1.0</version>
 					<executions>
 						<execution>
 							<id>attach-sources</id>
-							<goals><goal>jar</goal></goals> 
-						</execution>
-					</executions>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-javadoc-plugin</artifactId>
-					<executions>
-						<execution>
-							<id>attach-javadocs</id>
+							<phase>verify</phase>
 							<goals>
-								<goal>jar</goal>
+								<goal>jar-no-fork</goal>
 							</goals>
 						</execution>
 					</executions>
@@ -62,10 +49,10 @@
 		</pluginManagement>
 	</build>
 	<distributionManagement>
-	  <repository>
-		  <id>bintray-ahmedalyousif-java</id>
-		  <name>ahmedalyousif-java</name>
-	      <url>https://api.bintray.com/maven/ahmedalyousif/java/CSVObjectivy/;publish=1</url>
-	  </repository>
+		<repository>
+			<id>bintray-ahmedalyousif-java</id>
+			<name>ahmedalyousif-java</name>
+			<url>https://api.bintray.com/maven/ahmedalyousif/java/CSVObjectivy/;publish=1</url>
+		</repository>
 	</distributionManagement>
 </project>
